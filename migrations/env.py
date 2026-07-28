@@ -1,5 +1,7 @@
 import logging
 from logging.config import fileConfig
+from app.models import User, Post
+
 
 from flask import current_app
 
