@@ -1,4 +1,97 @@
-2026-08-04 12:43:15,851 ERROR: Exception on /user/logan [GET] [in /Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py:875]
+2026-08-04 12:41:42,239 ERROR: Exception on /user/logan [GET] [in /Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py:875]
+Traceback (most recent call last):
+  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/faithful/Desktop/microblog/app/routes.py", line 86, in user
+    return render_template('user.html', user=user, posts=posts, form=form)
+  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/faithful/Desktop/microblog/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/faithful/Desktop/microblog/app/templates/base.html", line 31, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^
+  File "/Users/faithful/Desktop/microblog/app/templates/user.html", line 13, in block 'content'
+    <p><a href="{{ url_for('edit_profile') }}">Edit your profile</a></p>
+    ^^^^^^^^^^^^^^^^^
+  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/werkzeug/routing/map.py", line 901, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'edit_profile'. Did you mean 'main.edit_profile' instead?
+2026-08-04 12:41:45,258 ERROR: Exception on /user/logan [GET] [in /Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py:875]
+Traceback (most recent call last):
+  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/faithful/Desktop/microblog/app/routes.py", line 86, in user
+    return render_template('user.html', user=user, posts=posts, form=form)
+  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/faithful/Desktop/microblog/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/faithful/Desktop/microblog/app/templates/base.html", line 31, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^
+  File "/Users/faithful/Desktop/microblog/app/templates/user.html", line 13, in block 'content'
+    <p><a href="{{ url_for('edit_profile') }}">Edit your profile</a></p>
+    ^^^^^^^^^^^^^^^^^
+  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/werkzeug/routing/map.py", line 901, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'edit_profile'. Did you mean 'main.edit_profile' instead?
+2026-08-04 12:42:43,791 INFO: Microblog startup [in /Users/faithful/Desktop/microblog/app/__init__.py:43]
+2026-08-04 12:42:50,663 INFO: Microblog startup [in /Users/faithful/Desktop/microblog/app/__init__.py:43]
+2026-08-04 12:43:02,740 INFO: Microblog startup [in /Users/faithful/Desktop/microblog/app/__init__.py:43]
+2026-08-04 12:43:14,908 ERROR: Exception on /user/logan [GET] [in /Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py:875]
 Traceback (most recent call last):
   File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
     response = self.full_dispatch_request()
@@ -43,50 +136,3 @@ Traceback (most recent call last):
   File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/werkzeug/routing/map.py", line 901, in build
     raise BuildError(endpoint, values, method, self)
 werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'edit_profile'. Did you mean 'main.edit_profile' instead?
-2026-08-04 12:43:16,867 ERROR: Exception on /user/logan [GET] [in /Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py:875]
-Traceback (most recent call last):
-  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/Users/faithful/Desktop/microblog/app/routes.py", line 86, in user
-    return render_template('user.html', user=user, posts=posts, form=form)
-  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/templating.py", line 151, in render_template
-    return _render(app, template, context)
-  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/templating.py", line 132, in _render
-    rv = template.render(context)
-  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
-    self.environment.handle_exception()
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
-  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/Users/faithful/Desktop/microblog/app/templates/user.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/Users/faithful/Desktop/microblog/app/templates/base.html", line 31, in top-level template code
-    {% block content %}{% endblock %}
-    ^^^^^^^^^^^^^^^^^
-  File "/Users/faithful/Desktop/microblog/app/templates/user.html", line 13, in block 'content'
-    <p><a href="{{ url_for('main.edit_profile') }}">Edit your profile</a></p>
-    ^^^^^^^^^^^^^^^^^
-  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 1121, in url_for
-    return self.handle_url_build_error(error, endpoint, values)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 1110, in url_for
-    rv = url_adapter.build(  # type: ignore[union-attr]
-        endpoint,
-    ...<3 lines>...
-        force_external=_external,
-    )
-  File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/werkzeug/routing/map.py", line 901, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'edit_profile'. Did you mean 'main.edit_profile' instead?
-2026-08-04 12:43:53,474 INFO: Microblog startup [in /Users/faithful/Desktop/microblog/app/__init__.py:43]
-2026-08-04 12:44:42,634 INFO: Microblog startup [in /Users/faithful/Desktop/microblog/app/__init__.py:43]

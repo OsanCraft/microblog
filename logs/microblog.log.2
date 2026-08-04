@@ -1,4 +1,16 @@
-2026-08-04 12:43:15,851 ERROR: Exception on /user/logan [GET] [in /Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py:875]
+2026-08-02 16:28:13,434 INFO: Microblog startup [in /Users/faithful/Desktop/microblog/app/__init__.py:43]
+2026-08-02 16:28:21,279 INFO: Microblog startup [in /Users/faithful/Desktop/microblog/app/__init__.py:43]
+2026-08-02 16:28:21,551 INFO: Microblog startup [in /Users/faithful/Desktop/microblog/app/__init__.py:43]
+2026-08-04 12:23:41,619 INFO: Microblog startup [in /Users/faithful/Desktop/microblog/app/__init__.py:43]
+2026-08-04 12:24:14,509 INFO: Microblog startup [in /Users/faithful/Desktop/microblog/app/__init__.py:43]
+2026-08-04 12:24:23,116 INFO: Microblog startup [in /Users/faithful/Desktop/microblog/app/__init__.py:43]
+2026-08-04 12:24:45,913 INFO: Microblog startup [in /Users/faithful/Desktop/microblog/app/__init__.py:43]
+2026-08-04 12:24:59,028 INFO: Microblog startup [in /Users/faithful/Desktop/microblog/app/__init__.py:43]
+2026-08-04 12:32:35,509 INFO: Microblog startup [in /Users/faithful/Desktop/microblog/app/__init__.py:43]
+2026-08-04 12:33:02,905 INFO: Microblog startup [in /Users/faithful/Desktop/microblog/app/__init__.py:43]
+2026-08-04 12:40:39,463 INFO: Microblog startup [in /Users/faithful/Desktop/microblog/app/__init__.py:43]
+2026-08-04 12:40:46,483 INFO: Microblog startup [in /Users/faithful/Desktop/microblog/app/__init__.py:43]
+2026-08-04 12:41:36,875 ERROR: Exception on /user/logan [GET] [in /Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py:875]
 Traceback (most recent call last):
   File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
     response = self.full_dispatch_request()
@@ -29,7 +41,7 @@ Traceback (most recent call last):
     {% block content %}{% endblock %}
     ^^^^^^^^^^^^^^^^^
   File "/Users/faithful/Desktop/microblog/app/templates/user.html", line 13, in block 'content'
-    <p><a href="{{ url_for('main.edit_profile') }}">Edit your profile</a></p>
+    <p><a href="{{ url_for('edit_profile') }}">Edit your profile</a></p>
     ^^^^^^^^^^^^^^^^^
   File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 1121, in url_for
     return self.handle_url_build_error(error, endpoint, values)
@@ -43,7 +55,7 @@ Traceback (most recent call last):
   File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/werkzeug/routing/map.py", line 901, in build
     raise BuildError(endpoint, values, method, self)
 werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'edit_profile'. Did you mean 'main.edit_profile' instead?
-2026-08-04 12:43:16,867 ERROR: Exception on /user/logan [GET] [in /Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py:875]
+2026-08-04 12:41:39,194 ERROR: Exception on /user/logan [GET] [in /Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py:875]
 Traceback (most recent call last):
   File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
     response = self.full_dispatch_request()
@@ -74,7 +86,7 @@ Traceback (most recent call last):
     {% block content %}{% endblock %}
     ^^^^^^^^^^^^^^^^^
   File "/Users/faithful/Desktop/microblog/app/templates/user.html", line 13, in block 'content'
-    <p><a href="{{ url_for('main.edit_profile') }}">Edit your profile</a></p>
+    <p><a href="{{ url_for('edit_profile') }}">Edit your profile</a></p>
     ^^^^^^^^^^^^^^^^^
   File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 1121, in url_for
     return self.handle_url_build_error(error, endpoint, values)
@@ -88,5 +100,3 @@ Traceback (most recent call last):
   File "/Users/faithful/Desktop/microblog/venv/lib/python3.13/site-packages/werkzeug/routing/map.py", line 901, in build
     raise BuildError(endpoint, values, method, self)
 werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'edit_profile'. Did you mean 'main.edit_profile' instead?
-2026-08-04 12:43:53,474 INFO: Microblog startup [in /Users/faithful/Desktop/microblog/app/__init__.py:43]
-2026-08-04 12:44:42,634 INFO: Microblog startup [in /Users/faithful/Desktop/microblog/app/__init__.py:43]
